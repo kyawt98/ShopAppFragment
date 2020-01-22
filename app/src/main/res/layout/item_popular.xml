@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardUseCompatPadding="true"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_new"
+                android:layout_width="55dp"
+                android:layout_height="20dp"
+                app:cardBackgroundColor="#7DBCEC"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.05">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_discount"
+                android:layout_width="55dp"
+                android:layout_height="20dp"
+                app:cardBackgroundColor="#F18461"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintLeft_toRightOf="@id/card_new"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.05"
+                android:layout_marginLeft="5dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/txt_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30% off"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I Phone 8 Plus"
+                android:textColor="#2C2A2A"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@id/card_new"
+                app:layout_constraintLeft_toLeftOf="@id/card_new"/>
+
+            <TextView
+                android:id="@+id/txt_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple"
+                android:textColor="#888585"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_name"
+                app:layout_constraintLeft_toLeftOf="@id/card_new"/>
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="4"
+                android:layout_marginTop="5dp"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                app:layout_constraintLeft_toLeftOf="@id/txt_brand"
+                app:layout_constraintTop_toBottomOf="@id/txt_brand"/>
+
+            <TextView
+                android:id="@+id/txt_new_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="988888"
+                android:textColor="#F14848"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@id/rating"
+                app:layout_constraintLeft_toLeftOf="@id/rating"/>
+
+            <TextView
+                android:id="@+id/txt_ks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KS"
+                android:textColor="#F14848"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@id/rating"
+                app:layout_constraintLeft_toRightOf="@id/txt_new_price"/>
+
+            <TextView
+                android:id="@+id/txt_old_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="110000"
+                android:textColor="#2C2A2A"
+                android:padding="4dp"
+                android:background="@drawable/strike"
+                app:layout_constraintTop_toBottomOf="@id/rating"
+                app:layout_constraintLeft_toRightOf="@id/txt_ks"/>
+
+            <TextView
+                android:id="@+id/txt_old_ks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KS"
+                android:textColor="#2C2A2A"
+                android:background="@drawable/strike"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@id/rating"
+                app:layout_constraintLeft_toRightOf="@id/txt_old_price"/>
+
+            <ImageView
+                android:id="@+id/img_popular"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

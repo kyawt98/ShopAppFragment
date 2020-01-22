@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BrowseBrandFragment">
+
+    <ImageView
+        android:id="@+id/customer_service"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/brand"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/txt_need_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEED HELP?"
+        android:textStyle="bold"
+        android:textColor="#292828"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintTop_toBottomOf="@id/customer_service"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/customer_service"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <TextView
+        android:id="@+id/txt_customer_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CUSTOMER SERVICE"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="@id/txt_need_help"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintTop_toBottomOf="@id/txt_need_help"/>
+
+    <Button
+        android:id="@+id/btn_call"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:text="Call Now"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_background"
+        app:layout_constraintTop_toBottomOf="@id/txt_customer_service"
+        app:layout_constraintLeft_toLeftOf="@id/txt_customer_service"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
